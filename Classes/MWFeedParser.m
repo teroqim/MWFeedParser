@@ -610,6 +610,7 @@
                         if ([currentPath isEqualToString:@"/rss/channel/title"]) { if (processedText.length > 0) info.title = processedText; processed = YES; }
                         else if ([currentPath isEqualToString:@"/rss/channel/description"]) { if (processedText.length > 0) info.summary = processedText; processed = YES; }
                         else if ([currentPath isEqualToString:@"/rss/channel/link"]) { if (processedText.length > 0) info.link = processedText; processed = YES; }
+                        else if ([currentPath isEqualToString:@"/rss/channel/itunes:image"]) { info.imageUrl = self.currentElementAttributes[@"href"]; processed = YES; }
                     }
                     
                     break;
